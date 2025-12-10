@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartão Virtual - Revisa Paulista</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Cores Baseadas na Imagem para texto de contato e botões */
+        :root {
+            --color-text-dark: #371E7D; /* Roxo escuro */
+            --color-highlight: #00A9F4; /* Azul claro para hover/botões */
+            --color-button-bg: #F0F0F0; /* Fundo leve para botões */
+        }
+
+        /* Estilos Globais e Reset */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Container Principal do Cartão (Adaptado para Botões) */
+        .card-container {
+            width: 100%;
+            max-width: 600px; /* Largura para simular um cartão horizontal */
+            /* A altura será automática (auto) para acomodar a área de botões */
+            height: auto; 
+            background-color: #F8F8F8;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Área do Logo (Ocupa a parte superior) */
+        .logo-area {
+            /* Definindo uma altura fixa para a área do logo */
+            height: 200px; 
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        /* A tag da Imagem */
+        .logo-area img {
+            width: 100%; 
+            height: 100%;
+            object-fit: contain; /* Garante que a imagem inteira caiba, sem cortes. */
+            object-position: 50% 50%; 
+        }
+
+
+        /* Seção de Contato - Nova Estrutura de Botões */
+        .contact-section {
+            padding: 20px 30px 30px; /* Mais padding na parte de baixo */
+            text-align: center;
+        }
+
+        /* Estilo dos Botões (Links grandes) */
+        .contact-button {
+            display: block; /* Ocupa a largura total */
+            text-decoration: none;
+            color: var(--color-text-dark);
+            background-color: var(--color-button-bg);
+            border: 1px solid #E0E0E0;
+            border-radius: 8px;
+            padding: 15px 20px; /* Aumenta a altura do botão */
+            margin-bottom: 12px;
+            font-size: 1em;
+            font-weight: 500;
+            transition: background-color 0.2s, color 0.2s, transform 0.1s;
+            display: flex; /* Para alinhar o ícone e o texto */
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .contact-button i {
+            font-size: 1.2em;
+            margin-right: 10px;
+            color: var(--color-text-dark);
+        }
+
+        .contact-button:hover {
+            background-color: var(--color-highlight);
+            color: white;
+            border-color: var(--color-highlight);
+            transform: translateY(-1px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-button:hover i {
+            color: white; /* Muda a cor do ícone para branco no hover */
+        }
+        
+        /* Estilo especial para o botão de localização (Endereço) */
+        .address-info {
+            font-size: 0.9em;
+            color: #777;
+            margin-top: 5px;
+            line-height: 1.4;
+        }
+
+        /* Ajuste para telas menores (Celular) */
+        @media (max-width: 768px) {
+            .card-container {
+                max-width: 90%;
+            }
+            .logo-area {
+                height: 160px; /* Ajusta a altura do logo para telas menores */
+            }
+            .contact-section {
+                padding: 15px 20px 20px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+
+    <div class="card-container">
+        
+        <div class="logo-area">
+            <img src="https://i.postimg.cc/Bbfgv3dk/Imagem-do-Whats-App-de-2025-12-02-a(s)-17-26-50-bf083e44.jpg" alt="Logo Revisa Paulista">
+        </div>
+
+        <div class="contact-section">
+            
+            <a href="https://wa.me/5511983100712" target="_blank" class="contact-button">
+                <i class="fab fa-whatsapp"></i>
+                Falar pelo WhatsApp (11) 98310-0712
+            </a>
+            
+            <a href="tel:+5511983100712" class="contact-button">
+                <i class="fas fa-phone"></i>
+                Ligar Agora (11) 98310-0712
+            </a>
+            
+            <a href="mailto:taisa@revisapaulista.com.br" class="contact-button">
+                <i class="fas fa-envelope"></i>
+                Enviar E-mail (taisa@revisapaulista.com.br)
+            </a>
+            
+            <a href="https://instagram.com/revisapaulista" target="_blank" class="contact-button">
+                <i class="fab fa-instagram"></i>
+                Ver Instagram (@revisapaulista)
+            </a>
+            
+            <a href="https://maps.app.goo.gl/YourGoogleMapsLinkHere" target="_blank" class="contact-button">
+                <i class="fas fa-map-marker-alt"></i>
+                Ver Localização
+            </a>
+            <div class="address-info">
+                Av. Paulista, 2064, 14º andar, sala 1408
+            </div>
+
+        </div>
+        
+    </div>
+
+</body>
+</html>
